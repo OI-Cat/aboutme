@@ -11,38 +11,20 @@
 
 
 		<!-- Scripts -->
-			<script>
-				function a(){
-					var firstArr = [ 1, 2 ];
-
-    var secondArr = [ 3, 4 ];
-
-    var skipNum = firstArr.splice(Math.floor(Math.random() * firstArr.length),
-            1);
-    // alert(skipNum);
-    if (skipNum == globalNum) {
-        skipNum = secondArr.splice(
-                Math.floor(Math.random() * secondArr.length), 1);
-    }
-
-    globalNum = skipNum;
-
-    window.sessionStorage.setItem("skipNum", skipNum);
-    if (skipNum == 1) {
-        window.location.href = "https://s2.ax1x.com/2019/07/11/Z22cWR.png";
-    } else if (skipNum == 2) {
-        window.location.href = "https://s2.ax1x.com/2019/07/11/Z22RQx.png";
-    } else if (skipNum == 3) {
-        window.location.href = "https://s2.ax1x.com/2019/07/11/Z222S1.png";
-    } else if (skipNum == 4) {
-        window.location.href = "https://s2.ax1x.com/2019/07/11/Z22cWR.png";
-    }
+				<script type="text/javascript">
+    var myarr = new Array(); //javaScript 的函数区分大小写，如果这里写在 new array 执行就会出错。
+    myarr[0] = "https://s2.ax1x.com/2019/07/11/Z22cWR.png";
+    myarr[1] = "https://s2.ax1x.com/2019/07/11/Z22RQx.png";
+					myarr[2] = "https://s2.ax1x.com/2019/07/11/Z222S1.png";
+    alert(myarr[1]);
+    alert(Math.floor(Math.random()*myarr.length)); //这个Math也是；
+    window.location.href = myarr[Math.floor(Math.random()*myarr.length)];
+</script>
+				
 
 
-				}
-				 
 
-			</script>
+
 
 	</body>
 </html>
